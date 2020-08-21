@@ -1,0 +1,12 @@
+applications:
+  - name: my-app
+    command: npm start
+    buildpacks:
+      - nodejs_buildpack
+    routes:
+      - route: my-app.app.lds.org
+    env:
+      NODE_ENV: production
+      HOST: https://my-app.app.lds.org
+    memory: 256M
+    instances: 1
